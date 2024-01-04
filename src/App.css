@@ -3,26 +3,42 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: auto;
   pointer-events: none;
+  width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding-top: 10vh;
+  background-color: #4d4e50;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 1vmin);
   color: white;
 }
+
+.App-footer{
+  padding-top: 10vh;
+  background-color: #4d4e50;
+  display: flex;                  /*declares it as a flex icon*/
+  justify-content: space-evenly; 
+  color: white;              /* footer text color */
+  text-align: center;        /* centralizes the text*/
+  font-size: calc(5px + 2vmin); /* responsive font size */
+  padding: 0rem 0;           /* vertical padding */
+  position: fixed;           /* footer is fixed at the end of the page */
+  bottom: 0;                 /* aligns footer to the end of the browser page*/
+  left: 0;                   /* aligns footer to the left of the browser page*/
+  width: 100%;               /* makes footer occupy the entire width of the browser page*/
+  box-sizing: border-box;   /* makes sure that the padding and border are included in the total width and height of the elements */
+  z-index: 10; 
+}
+
+
 
 .App-link {
   color: #61dafb;
