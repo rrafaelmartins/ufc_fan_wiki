@@ -1,4 +1,4 @@
-#UFC fan wiki
+# UFC fan wiki
 
 Made to learn React and frontend concepts.
 
