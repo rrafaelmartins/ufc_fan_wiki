@@ -1,3 +1,9 @@
+#UFC fan wiki
+
+Made to learn React and frontend concepts.
+
+____
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
