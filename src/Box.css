@@ -5,8 +5,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-size: calc(10px + 1vmin);
-    color: white;
     padding-bottom: 10vh;
 }
 
@@ -15,7 +13,7 @@
     border-radius: 10px;
     width: 30%;
     margin: 10px;
-    height: 20vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -24,6 +22,14 @@
     justify-content: center;
 }
 
+.box:hover {
+        filter: drop-shadow(0 0 2em #7551e0aa);
+  }
+
+  .box.react:hover {
+    filter: drop-shadow(0 0 2em #151516aa);
+  }
+
 .box h1 {
     color: black;
     text-align: center;
@@ -31,19 +37,16 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 @media screen and (max-width: 600px) {
-    
     .box {
-        width: 90%; /* ajustar width para telas menores*/
+        width: 90%;
+        padding-bottom: 90%; /* Ajustar proporção para telas menores */
     }
 
     .box h1 {
-        font-size: 5vw; /* Ajustar font-size para telas menores */
+        font-size: 3vw; /* Ajustar font-size para telas menores */
     }
 }
-
-/*Utilizar unidades relativas como vw, vh, vmin, vmax, etc, facilita na responsividade do front-end. Essas unidades
-dependem do tamanho da tela (viewport width).*/

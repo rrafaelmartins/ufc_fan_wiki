@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom'
 import logo from './logo.svg';
 import Header from './Header.js'
 import Footer from './Footer.js'
@@ -9,6 +9,7 @@ import WeightClassInfo from './WeightClassInfo.js';
 
 
 function App() {
+  var [weightClass, setWeightClass] = useState("");
   return (
     
     <div className="App">
@@ -18,8 +19,8 @@ function App() {
       <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/weightclass" element={<WeightClassInfo />} />
+          <Route path="/" element={<Main weightClass={weightClass} setWeightClass={setWeightClass} />} />
+          <Route path="/weightclass" element={<WeightClassInfo weightClass={weightClass}/>} />
         </Routes>
       </Router>
       </div>
