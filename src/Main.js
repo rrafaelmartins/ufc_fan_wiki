@@ -1,6 +1,15 @@
 import { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 import { useNavigate } from 'react-router-dom';
+import bantamweightBackground from './assets/bantamweight-background.webp';
+import featherweightBackground from './assets/featherweight-background.jpeg';
+import flyweightBackground from './assets/flyweight-background.jpg';
+import heavyweightBackground from './assets/heavyweight-background.jpg';
+import lightheavyweightBackground from './assets/light-heavyweight-background.jpg';
+import lightweightBackground from './assets/lightweight-background.jpg';
+import middleweightBackground from './assets/middleweight-background.jpeg';
+import welterweightBackground from './assets/welterweight-background.webp';
+
 import './Box.css';
 
 function Main({ weightClass, setWeightClass }) {
@@ -12,11 +21,8 @@ function Main({ weightClass, setWeightClass }) {
         navigate('/weightclass');
     };
 
-    useEffect(() => {
-        // Lógica adicional que você pode querer executar após a montagem do componente
-        console.log('Componente montado!');
-    }, []); // O segundo argumento vazio indica que este efeito deve ser executado apenas uma vez, após a montagem do componente
-
+ // O segundo argumento vazio indica que este efeito deve ser executado apenas uma vez, após a montagem do componente
+    
     return (
         <div>
             <div className="boxes">
@@ -25,7 +31,8 @@ function Main({ weightClass, setWeightClass }) {
                         key={weightClass}
                         className='box'
                         sx={{
-                            backgroundImage: `url('.src/assets/${weightClass.toLowerCase()}-background.jpg')`
+                            backgroundImage: `url(${weightClass === 'Flyweight' ? flyweightBackground : weightClass === 'Bantamweight' ? bantamweightBackground : weightClass === 'Featherweight' ? featherweightBackground : weightClass === 'Lightweight' ? lightweightBackground : weightClass === 'Welterweight' ? welterweightBackground : weightClass === 'Middleweight' ? middleweightBackground : weightClass === 'Light-Heavyweight' ? lightheavyweightBackground : heavyweightBackground})`,
+                            backgroundSize: 'cover', // Ou 'contain', dependendo da preferência
                         }}
                         onClick={() => handleBoxClick(weightClass)}>
                         <h1>{weightClass}</h1>

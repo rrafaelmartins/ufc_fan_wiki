@@ -20,6 +20,7 @@
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
+    object-fit: cover;
 }
 
 .box:hover {
@@ -31,7 +32,7 @@
   }
 
 .box h1 {
-    color: black;
+    color: white;
     text-align: center;
     margin: 10px;
     display: flex;
