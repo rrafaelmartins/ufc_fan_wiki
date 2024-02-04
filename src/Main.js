@@ -21,7 +21,7 @@ function Main({ weightClass, setWeightClass }) {
         navigate('/weightclass');
     };
 
- // O segundo argumento vazio indica que este efeito deve ser executado apenas uma vez, após a montagem do componente
+
     
     return (
         <div>
