@@ -1,9 +1,33 @@
 #ranking-list {
-    max-height: 300px; /* maximum height of the list */
-    overflow-y: auto; /* vertical scrollbar when the content overflows */
-    border: 1px solid #ccc; 
-    padding-bottom: 100px; 
-    min-height: 100vh;
-    padding-bottom: 10vh; 
+    max-height: 300px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+  }
+  
+  #ranking-list li {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #ranking-list li:last-child {
+    border-bottom: none;
+  }
+  
+  #ranking-list li span {
+    margin-right: 10px;
+  }
+  
+  #ranking-list li h3 {
+    margin: 0;
+  }
+  
+  #ranking-list li p {
+    margin: 0;
+    color: #666;
   }
   

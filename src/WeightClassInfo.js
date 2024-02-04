@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './WeightClassInfo.css'
 
 async function getRankings() {
     try {
@@ -26,7 +27,7 @@ function WeightClassInfo ({weightClass}) {
             setRankings(data);
         });
     }, []);  // O segundo argumento vazio indica que este efeito deve ser executado apenas uma vez, após a montagem do componente
-    
+
     if (weightClass === "Light-Heavyweight"){
         weightClass = "light_heavyweight"
     }
@@ -41,7 +42,7 @@ function WeightClassInfo ({weightClass}) {
               <ol key={index}>
                 {ranking.competitor_rankings.map((competitorRanking, subIndex) => ( 
                   <li key={subIndex}>
-                    {competitorRanking.competitor.name}
+                    {subIndex === 0 ? "C" : subIndex}. {competitorRanking.competitor.name}
                   </li>
                 ))}
               </ol>
