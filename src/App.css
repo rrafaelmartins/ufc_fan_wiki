@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-bottom: 10vh;
 }
+
 
 .App-logo {
   height: auto;
@@ -35,7 +39,7 @@
   left: 0;                   /* aligns footer to the left of the browser page*/
   width: 100%;               /* makes footer occupy the entire width of the browser page*/
   box-sizing: border-box;   /* makes sure that the padding and border are included in the total width and height of the elements */
-  z-index: 10; 
+  z-index: 2;
 }
 
 .App-link {
