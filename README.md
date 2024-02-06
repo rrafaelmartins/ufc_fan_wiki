@@ -1,6 +1,6 @@
 # UFC fan wiki
 
-Made to learn React and frontend concepts. It utilizes a public third party UFC API.
+Made to learn basic React and frontend concepts. It utilizes a public third party UFC API.
 
 ____
 
