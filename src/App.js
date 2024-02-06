@@ -6,10 +6,12 @@ import Footer from './Footer.js'
 import Main from './Main.js'
 import './App.css';
 import WeightClassInfo from './WeightClassInfo.js';
+import FighterInfo from './FighterInfo.js';
 
 
 function App() {
   var [weightClass, setWeightClass] = useState("");
+  var [competitorData, setCompetitor] = useState("");
   return (
     
     <div className="App">
@@ -20,7 +22,8 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Main weightClass={weightClass} setWeightClass={setWeightClass} />} />
-          <Route path="/weightclass" element={<WeightClassInfo weightClass={weightClass}/>} />
+          <Route path="/weightclass" element={<WeightClassInfo weightClass={weightClass} competitor={competitorData} setCompetitor={setCompetitor}/>} />
+          <Route path="/fighterinfo" element={<FighterInfo competitorData={competitorData}/>} />
         </Routes>
       </Router>
       </div>

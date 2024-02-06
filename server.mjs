@@ -31,6 +31,28 @@ app.get('/api/getRankings', async (req, res) => { //This function takes two para
     }
 });
 
+
+app.get('/api/getCompetitor/:competitor_id', async (req, res) => {
+    try {
+        const competitor_id = req.params.competitor_id;
+        const api_key = process.env.REACT_APP_API_KEY;
+        const response = await fetch(`https://api.sportradar.com/mma/trial/v2/en/competitors/${competitor_id}/profile.json?api_key=${api_key}`);
+        const data = await response.json();
+
+        res.header('Access-Control-Allow-Origin', '*');
+        res.header('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
+        res.json(data);
+    } catch (error) {
+        // Handle errors
+        console.error('Error fetching competitor profile:', error);
+        res.status(500).json({ error: 'Internal server error' });
+    }
+});
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
+

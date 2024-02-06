@@ -1,0 +1,59 @@
+
+.fighter-info-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h1#competitor-name {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+h2 span {
+    background-color: #f9f9f9;
+    padding: 0 10px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.info-key,
+.record-key {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+}
+
+.info-value,
+.record-value {
+    color: #333;
+}
